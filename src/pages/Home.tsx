@@ -2,8 +2,9 @@ import { useState } from 'react';
 
 import styled from 'styled-components';
 
-import DataList from '../components/DataList';
 import FileSelector from '../components/FileSelector';
+import { HorizontalDataList } from '../components/horizontal';
+import { VerticalDataList } from '../components/vertical';
 
 const Container = styled.div`
     width: 100%;
@@ -48,7 +49,8 @@ function Home() {
     return (
         <Container>
             <FileSelector onChangeJsonData={handleChangeJsonData} />
-            <DataList jsonObj={jsonObj} />
+            <HorizontalDataList jsonObj={jsonObj} />
+            <VerticalDataList jsonObj={jsonObj} />
         </Container>
     );
 }
